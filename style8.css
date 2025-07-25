@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{ 
+  margin: 0px;
+  font-family: 'Nunito';
+  background: linear-gradient(to bottom, #000000, #430000, #000000);
+  color: white;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px;
+  justify-items: center;
+}
+h1{
+    margin-left: 60px;
+}
+
+.card{
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 180px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover{
+  background-color: #979595;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(139, 0, 0, 0.6);
+}
+
+.imagine{
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+}
+
+h4{
+  color: #000000;
+}
+
+.card a:link{
+  color: black;
+  text-decoration: none;
+}
+
+.card a:active {
+  color: black;
+}
+
+.card a:visited {
+  color: rgb(128, 132, 132);
+}
+
+.card a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.imagine img{
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.button{
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
