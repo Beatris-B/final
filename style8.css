@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+*{
+  margin: 0;
+}
 body{ 
   margin: 0px;
   font-family: 'Nunito';
@@ -7,65 +10,92 @@ body{
   color: white;
 }
 
+.container{
+  margin:auto;
+  width:1216px;
+}
+
 .grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 40px;
-  justify-items: center;
+  column-gap: 40px;
+  row-gap: 40px;
 }
+
 h1{
     margin-left: 60px;
 }
 
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
 .card{
   background: white;
-  padding: 10px;
-  border-radius: 10px;
-  width: 180px;
-  text-align: center;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+a{
+  text-decoration: none;
 }
 
 .card:hover{
-  background-color: #979595;
+  background-color: rgba(228, 131, 131, 0.6);
   transform: scale(1.05);
   box-shadow: 0 8px 15px rgba(139, 0, 0, 0.6);
 }
 
 .imagine{
-  width: 100%;
-  height: 180px;
-  border-radius: 10px;
-}
-
-h4{
-  color: #000000;
-}
-
-.card a:link{
-  color: black;
-  text-decoration: none;
-}
-
-.card a:active {
-  color: black;
-}
-
-.card a:visited {
-  color: rgb(128, 132, 132);
-}
-
-.card a:hover {
-  color: black;
-  text-decoration: none;
+  position: relative;
+  height: 469px;
 }
 
 .imagine img{
   width: 100%;
-  height: 200px;
-  border-radius: 10px;
+  height: 469px;
+  object-fit: cover;
+  object-position: center center;
+  transition: filter 0.3s ease;
+  cursor: pointer;
+  display: block;
+  z-index: 1;
+}
+
+.card:hover .imagine img {
+  filter: brightness(60%);;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  text-shadow: 1px 1px 4px rgba(121, 115, 115, 0.6);
+}
+
+.card:hover .overlay-text {
+  opacity: 1;
+}
+
+.imagine img:hover{
+  filter: brightness(60%);
+}
+
+h2{
+  color: #000000;
+  text-align: left;
+  margin: 5px;
 }
 
 .button{
@@ -77,4 +107,22 @@ h4{
   margin: 20px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.icon{
+  background-color: hsla(360, 96%, 35%, 0.302);
+  border: none;
+  border-radius: 8px;
+  z-index: 10;
+  padding: 10px;
+
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+}
+
+.icon p{
+    color: #FFFFFF;
+    font-weight: bold;
 }
